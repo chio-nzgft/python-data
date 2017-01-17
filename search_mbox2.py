@@ -1,14 +1,10 @@
-handle = open("mbox-short.txt")
+import urllib
+handle = urllib.urlopen('https://raw.githubusercontent.com/paulcarroty/Python-Snippets/master/Coursera%20Programming%20for%20Everybody%20(Python)/mbox-short.txt')
 lst1=list()
 lst2=list()
 for line in handle:
-    if line.startswith("From:"):
-        continue
-    if line.startswith("From"):
-        x=line.split()
-        y=x[-2:-1]
-        z=y[0]
-        lst1.append((z[0:2],1))
+    if line.startswith("From") and not line.startswith("From:"):
+        lst1.append((line.split()[-2:-1][0][0:2],1))
 lst1.sort()
 count=0
 for k,v in lst1:
