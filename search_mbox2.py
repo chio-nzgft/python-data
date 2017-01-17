@@ -1,5 +1,5 @@
 import urllib
-handle = urllib.urlopen('https://raw.githubusercontent.com/paulcarroty/Python-Snippets/master/Coursera%20Programming%20for%20Everybody%20(Python)/mbox-short.txt')
+handle = urllib.urlopen('https://raw.githubusercontent.com/chio-nzgft/python-data/master/mbox-short.txt')
 lst1=list()
 lst2=list()
 for line in handle:
