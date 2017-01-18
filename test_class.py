@@ -1,13 +1,13 @@
 '''
-Python 物件 class( 類別) , 例如  PartyAnimal
+Python 建立的 class( 類別) 叫 classobj(類別物件) , 例如  PartyAnimal
 
-建立了class 件叫 instance(實例) , 如 s, j
+實體化的 class 叫 instance(實例) , 如 s, j
 
 instance 中的def(函數) 叫  instancemethod,   如  s.__init__  ,s.party
 
-instance 中的常數 (srt ,int ,list .....) 還是一樣是 instance.srt 或 instance.int 如 s.x , s.name
+instance 中的常數 (srt ,int ,list .....) 還是一樣是 instance.srt 或 instance.int 如  s.name ,s.x 
 
-所以 class 不是實體 , 需實體化  , 例如  s=PartyAnimal("Jim") , 其中 "Jim" 是傳給 __init__ 用的初始參數(不是傳到 self , 是傳到 nam) ,
+所以 class 不是實體 , 需實體化  , 例如  s=PartyAnimal("Jim") , 其中 "Jim" 是傳給 __init__ 用的初始參數(不是傳到 self , 是傳到 nam)
 
 然而 所有  instance 中的def(函數) , 第一個變數是 self(就是,instance本身)   , 第二個才是 instance 傳進去的參數如 "Jim"
 
@@ -33,6 +33,7 @@ print type(j.__init__)
 print type(s.name)
 print type(s.x)
 print "PartyAnimal for S & x ==> ",s.name,s.x
+print type(PartyAnimal)
 
 '''
 -----------------------------------------------------------------------------------
@@ -48,4 +49,5 @@ Sally party count 2
 <type 'str'>
 <type 'int'>
 PartyAnimal for S & x ==>  Sally 2
+<type 'classobj'>
 '''
